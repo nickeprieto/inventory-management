@@ -754,8 +754,21 @@ export default {
 
 .kpi-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .kpi-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 5 KPIs fit on one row once the content area is wide enough */
+@media (min-width: 1280px) {
+  .kpi-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
 
 .kpi-card {
